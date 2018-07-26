@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Andela Technical Challenge, Quiz App">
+        <meta name="keywords" content="HTML,CSS,JavaScript,Quiz App,Andela,Technical Challenge">
+        <meta name="author" content="Adepoju Oluwasegun">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quiz App</title>
+        <link rel="stylesheet" type="text/css" href="styles/quiz_app.css"/>
+    </head>
+
+    <body>
+        <hr/>
+        <h1>Quiz App</h1>
+        <hr/>
+        <div class="info">
+            <P class="hint">Hint :</P>
+            <P class="hint_text"> There are
+                <em>
+                    <strong>FIVE (5)</strong>
+                </em> Questions in this section, with
+                <strong>
+                    <em> FOUR (4)</em>
+                </strong> possible Options to choose from.
+                <br/>
+                <br/>You will not be able to proceed to the next question till an Option is Chosen</p>
+        </div>
+
+        <div class="quiz_container">
+            <div class="quiz_app">
+                <fieldset>
+                    <div>
+                        <fieldset>
+                            <legend id="question_number"></legend>
+                            <p class="question_text" id="question_text">Welcome!</p>
+                            <p class="blink" id="start_instruction"> Click Below to Start the Quiz.</p>
+                            <p id="percentage_score"></p>
+                        </fieldset>
+                    </div>
+                    </br>
+                    <div id="options_with_buttons">
+                        <form action="" class="question_options" id="question_options">
+                        </form>
+
+                        </br>
+                        <div >
+                                <div >
+                            <button id="button_start" class="button_start">
+                                <span>Start Quiz</span>
+                            </button>
+                        </div>
+                            <div >
+                            <button id="button_next" class="button_next">
+                                <span>Next Question</span>
+                            </button>
+                        </div>
+                            <div >
+                            <button id="button_submit" class="button_submit">
+                                <span>Submit &#x3e;&#x3e;</span>
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        <script type="text/JavaScript" src="js/quiz_app.js"></script>
+    </body>
+
+</html>
