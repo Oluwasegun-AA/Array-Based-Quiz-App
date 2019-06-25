@@ -3,72 +3,141 @@
 
 <head lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="description" content="Andela Technical Challenge, Quiz App">
-        <meta name="keywords" content="HTML,CSS,JavaScript,Quiz App,Andela,Technical Challenge">
-        <meta name="author" content="Adepoju Oluwasegun">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Quiz App</title>
-        <link rel="stylesheet" type="text/css" href="styles/quiz_app.css"/>
-    </head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Demo Quiz App for Learning purposes (using data structures) | Adépòjù Olúwáségun">
+    <meta name="keywords" content="Array, Objects, quiz app">
+    <meta name="author" content="Adépòjù Olúwáségun">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" type="text/css" href="styles/quiz_app.css" />
+  </head>
 
-    <body>
-        <hr/>
-        <h1>Quiz App</h1>
-        <hr/>
-        <div class="info">
-            <P class="hint">Hint :</P>
-            <P class="hint_text"> There are
-                <em>
-                    <strong>FIVE (5)</strong>
-                </em> Questions in this section, with
-                <strong>
-                    <em> FOUR (4)</em>
-                </strong> possible Options to choose from.
-                <br/>
-                <br/>You will not be able to proceed to the next question till an Option is Chosen</p>
+<body>
+  <hr />
+  <h1>Quiz App</h1>
+  <hr />
+  <style>
+    #forkongithub a {
+      background: #000;
+      color: #fff;
+      text-decoration: none;
+      font-family: arial, sans-serif;
+      text-align: center;
+      font-weight: bold;
+      padding: 5px 40px;
+      font-size: 1rem;
+      line-height: 2rem;
+      position: relative;
+      transition: 0.5s;
+    }
+
+    #forkongithub a:hover {
+      background: #c11;
+      color: #fff;
+    }
+
+    #forkongithub a::before,
+    #forkongithub a::after {
+      content: "";
+      width: 100%;
+      display: block;
+      position: absolute;
+      top: 1px;
+      left: 0;
+      height: 1px;
+      background: #fff;
+    }
+
+    #forkongithub a::after {
+      bottom: 1px;
+      top: auto;
+    }
+
+    @media screen and (min-width:800px) {
+      #forkongithub {
+        position: fixed;
+        display: block;
+        top: 0;
+        right: 0;
+        width: 200px;
+        overflow: hidden;
+        height: 200px;
+        z-index: 9999;
+      }
+
+      #forkongithub a {
+        width: 200px;
+        position: absolute;
+        top: 60px;
+        right: -60px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+      }
+    }
+
+  </style><span id="forkongithub"><a href="https://github.com/shegsteham/Array-Based-Quiz-App">Fork me on
+      GitHub</a></span>
+  <div class="info">
+    <P class="hint">Hint :</P>
+    <P class="hint_text"> There are
+      <em>
+        <strong>FIVE (5)</strong>
+      </em> Questions in this section, with
+      <strong>
+        <em> FOUR (4)</em>
+      </strong> possible Options to choose from.
+      <br />
+      <br />You will not be able to proceed to the next question till an Option is Chosen</p>
+  </div>
+
+  <div class="quiz_container">
+    <div class="quiz_app">
+      <fieldset>
+        <div>
+          <fieldset>
+            <legend id="question_number"></legend>
+            <p class="question_text" id="question_text">Welcome!</p>
+            <p class="blink" id="start_instruction"> Click Below to Start the Quiz.</p>
+            <p id="percentage_score"></p>
+          </fieldset>
         </div>
+        </br>
+        <div id="options_with_buttons">
+          <form action="" class="question_options" id="question_options">
+          </form>
 
-        <div class="quiz_container">
-            <div class="quiz_app">
-                <fieldset>
-                    <div>
-                        <fieldset>
-                            <legend id="question_number"></legend>
-                            <p class="question_text" id="question_text">Welcome!</p>
-                            <p class="blink" id="start_instruction"> Click Below to Start the Quiz.</p>
-                            <p id="percentage_score"></p>
-                        </fieldset>
-                    </div>
-                    </br>
-                    <div id="options_with_buttons">
-                        <form action="" class="question_options" id="question_options">
-                        </form>
-
-                        </br>
-                        <div >
-                                <div >
-                            <button id="button_start" class="button_start">
-                                <span>Start Quiz</span>
-                            </button>
-                        </div>
-                            <div >
-                            <button id="button_next" class="button_next">
-                                <span>Next Question</span>
-                            </button>
-                        </div>
-                            <div >
-                            <button id="button_submit" class="button_submit">
-                                <span>Submit &#x3e;&#x3e;</span>
-                            </button>
-                        </div>
-                        </div>
-                    </div>
-                </fieldset>
+          </br>
+          <div>
+            <div>
+              <button id="button_start" class="button_start">
+                <span>Start Quiz</span>
+              </button>
             </div>
+            <div>
+              <button id="button_next" class="button_next">
+                <span>Next Question</span>
+              </button>
+            </div>
+            <div>
+              <button id="button_submit" class="button_submit">
+                <span>Submit &#x3e;&#x3e;</span>
+              </button>
+            </div>
+          </div>
         </div>
-        <script type="text/JavaScript" src="js/quiz_app.js"></script>
-    </body>
+      </fieldset>
+    </div>
+    <h5 class="follow">Built with &nbsp; ❤️ &nbsp; by Adépòjù Olúwáségun</h5>
+    <a href="https://twitter.com/shegsteham?ref_src=twsrc%5Etfw" class="twitter-follow-button"
+      data-show-count="false">Follow @TwitterDev</a>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </div>
+  <script type="text/JavaScript" src="js/quiz_app.js"></script>
+</body>
 
 </html>
