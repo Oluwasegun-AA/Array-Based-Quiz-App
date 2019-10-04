@@ -10,7 +10,7 @@
 * [License](#License)
 
 ### Test the App here
-View the App [HERE](https://shegsteham.github.io/Array-Based-Quiz-App/)
+View the App [HERE](https://oluwasegun-aa.github.io/Array-Based-Quiz-App/)
 
 ## Features
 
